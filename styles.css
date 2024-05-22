@@ -1,0 +1,16 @@
+.wrap {
+    color: white;
+}
+
+.collapse {
+    background-color: cornflowerblue;
+}
+.alpha{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+}
+.beta{
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}

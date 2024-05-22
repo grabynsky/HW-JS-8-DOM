@@ -310,8 +310,9 @@ function infoCourses(arr) {
                 `;
                 
                 ul.appendChild(li);
+                modulesDiv.appendChild(ul);
             }
-            container.appendChild(ul);
+            container.appendChild(modulesDiv);
         }
 
         document.body.appendChild(container);

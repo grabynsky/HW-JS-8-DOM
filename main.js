@@ -325,6 +325,7 @@ infoCourses(coursesArray);
 // =========================================================
 // Script for video
 // =========================================================
+// https://mixkit.co/free-stock-music/
 
 const info = [];
 

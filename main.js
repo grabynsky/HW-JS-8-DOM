@@ -338,7 +338,7 @@ for (let index = 0; index < metas.length; index++) {
 
     const infoObject = {
         title: title.innerText,
-        author: author.innerText,
+        author: author.innerText.slice(3),
         audio: audio[index].currentSrc,
     }
     info.push(infoObject);

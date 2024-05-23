@@ -271,7 +271,7 @@ function infoCourses(arr) {
         align-items: center;
 
     `;
-    
+
     for (const item of arr) {
         const fullStack = document.createElement('div');
         const mouthAndHourToGether = document.createElement('div');
@@ -297,18 +297,18 @@ function infoCourses(arr) {
         `;
 
         container.appendChild(mouthAndHourToGether);
-        
-        if(item.modules) {
+
+        if (item.modules) {
             for (const liElement of item.modules) {
-                                
+
                 const li = document.createElement('li');
                 li.innerText = `${liElement}`;
-                
-                li.style.cssText= `
+
+                li.style.cssText = `
                     font-size: 18px;
                     margin-bottom: 5px;                    
                 `;
-                
+
                 ul.appendChild(li);
                 modulesDiv.appendChild(ul);
             }
@@ -320,3 +320,27 @@ function infoCourses(arr) {
 }
 
 infoCourses(coursesArray);
+
+
+// =========================================================
+// Script for video
+// =========================================================
+
+const info = [];
+
+const metas = document.getElementsByClassName('item-grid-card__meta');
+
+for (let index = 0; index < metas.length; index++) {
+    const title = metas[index].getElementsByClassName('item-grid-card__title')[0];
+    const author = metas[index].getElementsByClassName('item-grid-music-preview__author')[0];
+    const audio = document.getElementsByTagName('audio');
+
+    const infoObject = {
+        title: title.innerText,
+        author: author.innerText,
+        audio: audio[index].currentSrc,
+    }
+    info.push(infoObject);
+}
+
+console.log(info)
